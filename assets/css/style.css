@@ -1,11 +1,14 @@
 :root {
   --header-height: 3rem;
 
-  --hue-color: 250;
-  --first-color: hsl(var(--hue-color), 69%, 61%); /* #6e57e0 */
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%); /* #7d6bd6 */
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%); /* #c2b6fc */
+  --hue-color: 10;
+  --first-color: hsl(var(--hue-color), 60%, 42%); /* #ab402b (Brick) */
+  --first-color-second: hsl(var(--hue-color), 60%, 42%);
+  --first-color-alt: hsl(var(--hue-color), 48%, 36%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  /* Solid fills (buttons, dots, lines): keep the base accent in both themes so white text stays readable */
+  --first-color-solid: hsl(var(--hue-color), 60%, 42%);
+  --first-color-solid-alt: hsl(var(--hue-color), 60%, 35%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -58,6 +61,9 @@
 
 /* Variables Dark Theme */
 body.dark-theme {
+  /* Lighter accent for text and outlines on the dark background */
+  --first-color: hsl(var(--hue-color), 60%, 68%);
+  --first-color-alt: hsl(var(--hue-color), 60%, 76%);
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -296,7 +302,7 @@ button {
 
 .home_blob {
   width: 200px;
-  fill: var(--first-color);
+  fill: var(--first-color-solid);
 }
 
 .home_blob-img {
@@ -353,7 +359,7 @@ button {
 /* BUTTONS */
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--first-color-solid);
   color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -362,7 +368,7 @@ button {
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color-solid-alt);
 }
 
 .button-flex {
@@ -460,7 +466,7 @@ button {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--first-color);
+  background-color: var(--first-color-solid);
   border-radius: 50%;
 }
 
@@ -468,7 +474,7 @@ button {
   display: block;
   width: 1px;
   height: 100%;
-  background-color: var(--first-color);
+  background-color: var(--first-color-solid);
   transform: translate(6px, -7px);
 }
 
@@ -560,7 +566,7 @@ button {
   text-align: center;
   padding: 10px;
   font-size: var(--small-font-size);
-  background-color: var(--first-color);
+  background-color: var(--first-color-solid);
   color: #fff;
   border-radius: 0.5rem;
   display: none;
@@ -627,7 +633,7 @@ button {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
+  background-color: var(--first-color-solid);
   opacity: 0.8;
   padding: 0 0.3rem;
   border-radius: 0.4rem;
@@ -636,7 +642,7 @@ button {
 }
 
 .scrollup:hover {
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color-solid-alt);
 }
 
 .scrollup_icon {

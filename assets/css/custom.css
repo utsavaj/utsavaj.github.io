@@ -317,7 +317,7 @@
   color: var(--first-color);
   box-shadow: inset 0 0 0 2px var(--first-color);
 }
-.button--outline:hover { background: var(--first-color); color: #fff; }
+.button--outline:hover { background: var(--first-color-solid); color: #fff; }
 
 /* ---- Accessibility: contrast ---- */
 /* Accent purple on a dark card measured 3.18:1; lighten it for dark mode. */
@@ -431,7 +431,7 @@ body.dark-theme textarea:focus-visible {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: var(--first-color);
+    background-color: var(--first-color-solid);
     opacity: 0.25;
   }
   .qualification_data:first-child::before { left: 50%; }
