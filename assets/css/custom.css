@@ -477,6 +477,11 @@ body.dark-theme textarea:focus-visible {
   background-color: hsl(345, 75%, 30%);
 }
 
+/* Success is green so it can never be mistaken for the red error banner */
+.alert_style:not(.alert_error) {
+  background-color: hsl(150, 45%, 28%);
+}
+
 /* ---- Fallback when the icon font fails to load ----
    Every icon is a glyph from the unicons CDN. If that request fails the icon
    elements collapse to zero width, which makes the theme toggle and the mobile

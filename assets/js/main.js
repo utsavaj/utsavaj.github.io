@@ -8,6 +8,8 @@ function showFormAlert(message, ok) {
   status.textContent = message;
   status.classList.toggle("alert_error", !ok);
   status.style.display = "block";
+  // The banner sits above the fields; bring it into view so it is not missed after pressing Send
+  status.scrollIntoView({ behavior: "smooth", block: "center" });
   setTimeout(function () {
     status.style.display = "none";
   }, ok ? 4000 : 12000);
